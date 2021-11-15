@@ -1,0 +1,58 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import SplashScreen from '../screens/SplashScreen1'
+import WelcomeScreen from '../screens/WelcomeScreen'
+import OTscreen3 from '../screens/OTscreen3'
+import PhoneNumber from '../screens/PhoneNumber'
+import OTPScreen from '../screens/OTP'
+import DetailsScreen from '../screens/DetailsScreen'
+
+//import {connect} from 'react-redux';
+
+const Stack = createStackNavigator();
+
+const Navigators = ({ token }) => {
+  console.log({ token })
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {!token ? (
+          <>
+          
+
+            {/* <Stack.Screen name="Splash" component={SplashScreen} />
+            <Stack.Screen name="Welcome" component={WelcomeScreen} />
+            <Stack.Screen name="OTscreen3" component={OTscreen3} />
+            <Stack.Screen name="PhoneNumber" component={PhoneNumber} /> 
+            <Stack.Screen name="OTPScreen" component={OTPScreen} />  */}
+            <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
+
+
+            {/* <Stack.Screen name="Signin" component={SigninScreen} />
+            <Stack.Screen name="Signup" component={SignupScreen} />
+            <Stack.Screen
+              name="ForgotPassword"
+              component={ForgotPasswordScreen}
+            />
+            
+            <Stack.Screen name="Verification" component={VerificationScreen} /> */}
+          </>
+        ) : (''
+          // <Stack.Screen name="Home" component={HomeScreen} />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+// const mapStateToProps = state => {
+//   return {
+//     token: state.generalState.token,
+//   };
+// };
+
+//export default connect(mapStateToProps)(Navigators);
+
+
+export default Navigators
