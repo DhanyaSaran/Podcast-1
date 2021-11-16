@@ -2,8 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen1'
-import WelcomeScreen from '../screens/WelcomeScreen'
-import OTscreen3 from '../screens/OTscreen3'
+import WelcomeScreen from '../screens/SplashScreen2'
+import OTscreen3 from '../screens/SplashScreen3'
 import PhoneNumber from '../screens/PhoneNumber'
 import OTPScreen from '../screens/OTP'
 import DetailsScreen from '../screens/DetailsScreen'
@@ -21,12 +21,12 @@ const Navigators = ({ token }) => {
           <>
           
 
-            {/* <Stack.Screen name="Splash" component={SplashScreen} />
-            <Stack.Screen name="Welcome" component={WelcomeScreen} />
-            <Stack.Screen name="OTscreen3" component={OTscreen3} />
-            <Stack.Screen name="PhoneNumber" component={PhoneNumber} /> 
-            <Stack.Screen name="OTPScreen" component={OTPScreen} />  */}
-            <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
+         <Stack.Screen name="Splash" component={SplashScreen} /> 
+              <Stack.Screen name="Welcome" component={WelcomeScreen} />
+             <Stack.Screen name="OTscreen3" component={OTscreen3} /> 
+            <Stack.Screen name="PhoneNumber" component={PhoneNumber} />
+          <Stack.Screen name="OTPScreen" component={OTPScreen} /> 
+            <Stack.Screen name="DetailsScreen" component={DetailsScreen} /> 
 
 
             {/* <Stack.Screen name="Signin" component={SigninScreen} />
